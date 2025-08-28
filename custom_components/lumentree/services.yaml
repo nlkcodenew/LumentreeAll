@@ -1,0 +1,40 @@
+
+export_analytics_data:
+  name: Export Analytics Data
+  description: Export historical analytics data to JSON file
+  fields:
+    device_sn:
+      name: Device Serial Number
+      description: Serial number of the device to export data for
+      required: true
+      selector:
+        text:
+    file_path:
+      name: Export File Path
+      description: Path where to save the exported data (relative to Home Assistant config)
+      required: false
+      default: "lumentree_export.json"
+      selector:
+        text:
+
+reset_analytics:
+  name: Reset Analytics History
+  description: Clear all historical analytics data
+  fields:
+    device_sn:
+      name: Device Serial Number
+      description: Serial number of the device to reset analytics for
+      required: true
+      selector:
+        text:
+
+get_analytics_stats:
+  name: Get Analytics Statistics
+  description: Get comprehensive analytics statistics
+  fields:
+    device_sn:
+      name: Device Serial Number
+      description: Serial number of the device to get stats for
+      required: true
+      selector:
+        text:
